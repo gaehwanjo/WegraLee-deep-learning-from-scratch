@@ -1,6 +1,9 @@
 # coding: utf-8
 import sys, os
 sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
+current_script_path = os.path.dirname(os.path.abspath(__file__))
+project_root_path = os.path.join(current_script_path, os.pardir)
+sys.path.append(os.path.abspath(project_root_path))
 from common.functions import *
 from common.gradient import numerical_gradient
 
