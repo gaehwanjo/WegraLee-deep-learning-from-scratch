@@ -1,7 +1,9 @@
 # coding: utf-8
 import os
 import sys
-sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
+current_script_path = os.path.dirname(os.path.abspath(__file__))
+project_root_path = os.path.join(current_script_path, os.pardir)
+sys.path.append(os.path.abspath(project_root_path))
 import numpy as np
 import matplotlib.pyplot as plt
 from dataset.mnist import load_mnist
